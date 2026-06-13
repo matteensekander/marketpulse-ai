@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+body { background: #0a0e1a; color: #e2e8f0; font-family: 'Space Grotesk', sans-serif; margin: 0; }
+
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+.glow-bull { box-shadow: 0 0 20px rgba(0, 255, 136, 0.15); }
+.glow-bear { box-shadow: 0 0 20px rgba(255, 59, 59, 0.15); }
+.glow-gold { box-shadow: 0 0 20px rgba(245, 197, 24, 0.15); }
+
+.flash-bull { animation: flashBull 0.6s ease; }
+.flash-bear { animation: flashBear 0.6s ease; }
+
+@keyframes flashBull {
+  0% { background: rgba(0, 255, 136, 0.3); }
+  100% { background: transparent; }
+}
+@keyframes flashBear {
+  0% { background: rgba(255, 59, 59, 0.3); }
+  100% { background: transparent; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #1e2d45 25%, #243452 50%, #1e2d45 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0e1a; }
+::-webkit-scrollbar-thumb { background: #1e2d45; border-radius: 2px; }
