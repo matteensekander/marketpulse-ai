@@ -48,10 +48,10 @@ export default function App() {
     <div className="min-h-screen bg-navy font-display">
       {/* Header */}
       <header className="border-b border-navy-border px-4 py-3 flex items-center justify-between sticky top-0 z-50 bg-navy">
-        <div className="flex items-center gap-3">
+        <a href="https://marketpulse-ai-roan.vercel.app" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
           <span className="text-bull font-mono text-xl font-bold">▲</span>
           <span className="text-white font-bold text-lg tracking-wide">MarketPulse AI</span>
-        </div>
+        </a>
         <SearchBar onSelect={setTicker} currentTicker={ticker} />
         <div className="flex items-center gap-3 text-xs font-mono">
           {stockData && (
